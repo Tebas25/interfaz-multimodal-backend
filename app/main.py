@@ -4,10 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(
     title="API Bartender Robótico - Módulo Multimodal",
     description="Estructura base de la API local.",
-    version="1.0.0"
+    version="1.0.0",
 )
 
-# Configuración básica de CORS
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -15,6 +15,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 @app.get("/")
 async def root():
